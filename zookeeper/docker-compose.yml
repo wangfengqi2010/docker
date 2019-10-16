@@ -4,41 +4,41 @@ services:
     image: zookeeper:3.5.5
     volumes:
       - ./bin:/apache-zookeeper-3.5.5-bin/sbin
-      - ./conf:/apache-zookeeper-3.5.5-bin/conf
-      - ./nodes/node-01/logs:/apache-zookeeper-3.5.5-bin/logs
-      - ./nodes/node-01:/apache-zookeeper-3.5.5-bin/tmp
+      - ./conf:/conf
+      - ./nodes/node-01/logs:/datalog
+      - ./nodes/node-01:/data
     hostname: localhost
     ports:
       - "2181:2181"
       - "2888:2888"
       - "3888:3888"
       - "12181:12181"
-    command: /apache-zookeeper-3.5.5-bin/sbin/zkServer.sh --config /apache-zookeeper-3.5.5-bin/conf start-foreground
+    command: /apache-zookeeper-3.5.5-bin/sbin/zkServer.sh start-foreground
   zk-node-02:
     image: zookeeper:3.5.5
     volumes:
       - ./bin:/apache-zookeeper-3.5.5-bin/sbin
-      - ./conf:/apache-zookeeper-3.5.5-bin/conf
-      - ./nodes/node-02/logs:/apache-zookeeper-3.5.5-bin/logs
-      - ./nodes/node-02:/apache-zookeeper-3.5.5-bin/tmp
+      - ./conf:/conf
+      - ./nodes/node-02/logs:/datalog
+      - ./nodes/node-02:/data
     hostname: localhost
     ports:
       - "2182:2181"
       - "12888:2888"
       - "13888:3888"
       - "22181:12181"
-    command: /apache-zookeeper-3.5.5-bin/sbin/zkServer.sh --config /apache-zookeeper-3.5.5-bin/conf start-foreground
+    command: /apache-zookeeper-3.5.5-bin/sbin/zkServer.sh start-foreground
   zk-node-03:
     image: zookeeper:3.5.5
     volumes:
       - ./bin:/apache-zookeeper-3.5.5-bin/sbin
-      - ./conf:/apache-zookeeper-3.5.5-bin/conf
-      - ./nodes/node-03/logs:/apache-zookeeper-3.5.5-bin/logs
-      - ./nodes/node-03:/apache-zookeeper-3.5.5-bin/tmp
+      - ./conf:/conf
+      - ./nodes/node-03/logs:/datalog
+      - ./nodes/node-03:/data
     hostname: localhost
     ports:
       - "2183:2181"
       - "32888:2888"
       - "33888:3888"
       - "32181:12181"
-    command: /apache-zookeeper-3.5.5-bin/sbin/zkServer.sh --config /apache-zookeeper-3.5.5-bin/conf start-foreground
+    command: /apache-zookeeper-3.5.5-bin/sbin/zkServer.sh start-foreground
