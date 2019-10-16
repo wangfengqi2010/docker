@@ -7,6 +7,7 @@ services:
       - ./conf:/apache-zookeeper-3.5.5-bin/conf
       - ./logs:/apache-zookeeper-3.5.5-bin/logs
       - ./nodes/node-01:/apache-zookeeper-3.5.5-bin/tmp
+    hostname: localhost
     ports:
       - "2181:2181"
       - "2888:2888"
@@ -20,6 +21,7 @@ services:
       - ./conf:/apache-zookeeper-3.5.5-bin/conf
       - ./logs:/apache-zookeeper-3.5.5-bin/logs
       - ./nodes/node-02:/apache-zookeeper-3.5.5-bin/tmp
+    hostname: localhost
     ports:
       - "2182:2181"
       - "12888:2888"
@@ -33,6 +35,7 @@ services:
       - ./conf:/apache-zookeeper-3.5.5-bin/conf
       - ./logs:/apache-zookeeper-3.5.5-bin/logs
       - ./nodes/node-03:/apache-zookeeper-3.5.5-bin/tmp
+    hostname: localhost
     ports:
       - "2183:2181"
       - "32888:2888"
