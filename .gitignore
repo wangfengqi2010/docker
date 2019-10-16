@@ -29,3 +29,8 @@ build/
 
 ### VS Code ###
 .vscode/
+
+### zookeeper ###
+zookeeper/nodes/node-01/version-2
+zookeeper/nodes/node-02/version-2
+zookeeper/nodes/node-03/version-2
