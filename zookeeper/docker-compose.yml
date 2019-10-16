@@ -5,6 +5,7 @@ services:
     volumes:
       - ./bin:/apache-zookeeper-3.5.5-bin/sbin
       - ./conf:/apache-zookeeper-3.5.5-bin/conf
+      - ./logs:/apache-zookeeper-3.5.5-bin/logs
       - ./nodes/node-01:/apache-zookeeper-3.5.5-bin/tmp
     ports:
       - "2181:2181"
@@ -17,6 +18,7 @@ services:
     volumes:
       - ./bin:/apache-zookeeper-3.5.5-bin/sbin
       - ./conf:/apache-zookeeper-3.5.5-bin/conf
+      - ./logs:/apache-zookeeper-3.5.5-bin/logs
       - ./nodes/node-02:/apache-zookeeper-3.5.5-bin/tmp
     ports:
       - "2182:2181"
@@ -29,6 +31,7 @@ services:
     volumes:
       - ./bin:/apache-zookeeper-3.5.5-bin/sbin
       - ./conf:/apache-zookeeper-3.5.5-bin/conf
+      - ./logs:/apache-zookeeper-3.5.5-bin/logs
       - ./nodes/node-03:/apache-zookeeper-3.5.5-bin/tmp
     ports:
       - "2183:2181"
