@@ -1,0 +1,4 @@
+server.1=zk-node-01:2888:3888:participant
+server.2=zk-node-02:2888:3888:participant
+server.3=zk-node-03:2888:3888:participant
+version=100000000
