@@ -37,3 +37,4 @@ zookeeper/nodes/node-02/version-2
 zookeeper/nodes/node-02/logs
 zookeeper/nodes/node-03/version-2
 zookeeper/nodes/node-03/logs
+zookeeper/conf/zoo.cfg.dynamic.next
