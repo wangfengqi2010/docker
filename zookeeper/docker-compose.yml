@@ -5,7 +5,7 @@ services:
     volumes:
       - ./bin:/apache-zookeeper-3.5.5-bin/sbin
       - ./conf:/apache-zookeeper-3.5.5-bin/conf
-      - ./logs:/apache-zookeeper-3.5.5-bin/logs
+      - ./nodes/node-01/logs:/apache-zookeeper-3.5.5-bin/logs
       - ./nodes/node-01:/apache-zookeeper-3.5.5-bin/tmp
     hostname: localhost
     ports:
@@ -19,7 +19,7 @@ services:
     volumes:
       - ./bin:/apache-zookeeper-3.5.5-bin/sbin
       - ./conf:/apache-zookeeper-3.5.5-bin/conf
-      - ./logs:/apache-zookeeper-3.5.5-bin/logs
+      - ./nodes/node-02/logs:/apache-zookeeper-3.5.5-bin/logs
       - ./nodes/node-02:/apache-zookeeper-3.5.5-bin/tmp
     hostname: localhost
     ports:
@@ -33,7 +33,7 @@ services:
     volumes:
       - ./bin:/apache-zookeeper-3.5.5-bin/sbin
       - ./conf:/apache-zookeeper-3.5.5-bin/conf
-      - ./logs:/apache-zookeeper-3.5.5-bin/logs
+      - ./nodes/node-03/logs:/apache-zookeeper-3.5.5-bin/logs
       - ./nodes/node-03:/apache-zookeeper-3.5.5-bin/tmp
     hostname: localhost
     ports:
