@@ -158,4 +158,3 @@ CLIENT_JVMFLAGS="-Dzookeeper.clientCnxnSocket=org.apache.zookeeper.ClientCnxnSoc
 -Dzookeeper.ssl.trustStore.password=zaozuo \
 -Dzookeeper.client.secure=true"
 export CLIENT_JVMFLAGS="-Xmx${ZK_CLIENT_HEAP}m $CLIENT_JVMFLAGS"
-
