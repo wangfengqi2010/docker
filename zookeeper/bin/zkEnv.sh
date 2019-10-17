@@ -142,9 +142,9 @@ fi
 # default heap for zookeeper server
 ZK_SERVER_HEAP="${ZK_SERVER_HEAP:-1000}"
 SERVER_JVMFLAGS="-Dzookeeper.serverCnxnFactory=org.apache.zookeeper.server.NettyServerCnxnFactory \
--Dzookeeper.ssl.keyStore.location=$ZOOCFGDIR/certs/zaozuo-zk-store.jks \
+-Dzookeeper.ssl.keyStore.location=$ZOOCFGDIR/certs/store.jks \
 -Dzookeeper.ssl.keyStore.password=zaozuo \
--Dzookeeper.ssl.trustStore.location=$ZOOCFGDIR/certs/zaozuo-zk-trust.jks \
+-Dzookeeper.ssl.trustStore.location=$ZOOCFGDIR/certs/trust.jks \
 -Dzookeeper.ssl.trustStore.password=zaozuo \
 -Djdk.tls.rejectClientInitiatedRenegotiation=true"
 export SERVER_JVMFLAGS="-Xmx${ZK_SERVER_HEAP}m $SERVER_JVMFLAGS"
@@ -152,9 +152,9 @@ export SERVER_JVMFLAGS="-Xmx${ZK_SERVER_HEAP}m $SERVER_JVMFLAGS"
 # default heap for zookeeper client
 ZK_CLIENT_HEAP="${ZK_CLIENT_HEAP:-256}"
 CLIENT_JVMFLAGS="-Dzookeeper.clientCnxnSocket=org.apache.zookeeper.ClientCnxnSocketNetty \
--Dzookeeper.ssl.keyStore.location=$ZOOCFGDIR/certs/zaozuo-zk-store.jks \
+-Dzookeeper.ssl.keyStore.location=$ZOOCFGDIR/certs/store.jks \
 -Dzookeeper.ssl.keyStore.password=zaozuo \
--Dzookeeper.ssl.trustStore.location=$ZOOCFGDIR/certs/zaozuo-zk-trust.jks \
+-Dzookeeper.ssl.trustStore.location=$ZOOCFGDIR/certs/trust.jks \
 -Dzookeeper.ssl.trustStore.password=zaozuo \
 -Dzookeeper.client.secure=true"
 export CLIENT_JVMFLAGS="-Xmx${ZK_CLIENT_HEAP}m $CLIENT_JVMFLAGS"
