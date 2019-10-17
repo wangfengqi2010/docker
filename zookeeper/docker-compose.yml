@@ -5,9 +5,10 @@ services:
     volumes:
       - ./bin:/apache-zookeeper-3.5.5-bin/bin
       - ./conf:/conf
-      - ./nodes/node-01/logs:/datalog
-      - ./nodes/node-01:/data
-    hostname: localhost
+      - ./nodes/node-01/logs:/logs
+      - ./nodes/node-01/data:/data
+      - ./nodes/node-01/datalog:/datalog
+    hostname: zk1.zaozuo.com
     ports:
       - "2181:2181"
       - "2888:2888"
@@ -18,9 +19,10 @@ services:
     volumes:
       - ./bin:/apache-zookeeper-3.5.5-bin/bin
       - ./conf:/conf
-      - ./nodes/node-02/logs:/datalog
-      - ./nodes/node-02:/data
-    hostname: localhost
+      - ./nodes/node-02/logs:/logs
+      - ./nodes/node-02/data:/data
+      - ./nodes/node-02/datalog:/datalog
+    hostname: zk2.zaozuo.com
     ports:
       - "2182:2181"
       - "12888:2888"
@@ -31,9 +33,10 @@ services:
     volumes:
       - ./bin:/apache-zookeeper-3.5.5-bin/bin
       - ./conf:/conf
-      - ./nodes/node-03/logs:/datalog
-      - ./nodes/node-03:/data
-    hostname: localhost
+      - ./nodes/node-03/logs:/logs
+      - ./nodes/node-03/data:/data
+      - ./nodes/node-03/datalog:/datalog
+    hostname: zk3.zaozuo.com
     ports:
       - "2183:2181"
       - "32888:2888"
