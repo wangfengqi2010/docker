@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 services:
   zk-node-01:
     image: zookeeper:3.5.5
